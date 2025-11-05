@@ -105,6 +105,7 @@ const VideoInterviewsPage = () => {
             Experience realistic AI-powered video interviews that adapt to your responses.
             Get instant feedback and improve your interview skills at your own pace.
           </p>
+          <a href='https://interviewsta-app-frontend.vercel.app'>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -115,6 +116,7 @@ const VideoInterviewsPage = () => {
             <span>Start Your First Interview</span>
             <ArrowRight className="h-5 w-5" />
           </motion.button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -261,6 +263,7 @@ const VideoInterviewsPage = () => {
             Join thousands of professionals who have improved their interview skills with Glee.
             Start practicing today!
           </p>
+          <a href='https://interviewsta-app-frontend.vercel.app'>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -270,6 +273,7 @@ const VideoInterviewsPage = () => {
             <Play className="h-5 w-5" />
             <span>Begin Practice Interview</span>
           </motion.button>
+          </a>
         </motion.div>
       </div>
     </div>

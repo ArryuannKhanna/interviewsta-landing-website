@@ -97,6 +97,7 @@ const DashboardPage= ({ onSectionChange }) => {
             Track your progress, analyze performance, and get personalized insights
             all in one powerful dashboard designed to accelerate your interview preparation.
           </p>
+          <a href='https://interviewsta-app-frontend.vercel.app'>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -107,6 +108,7 @@ const DashboardPage= ({ onSectionChange }) => {
             <span>Go to Dashboard</span>
             <ArrowRight className="h-5 w-5" />
           </motion.button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -222,6 +224,7 @@ const DashboardPage= ({ onSectionChange }) => {
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Access your personalized dashboard now and take control of your interview preparation journey.
           </p>
+          <a href='https://interviewsta-app-frontend.vercel.app'>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -231,6 +234,7 @@ const DashboardPage= ({ onSectionChange }) => {
             <LayoutDashboard className="h-5 w-5" />
             <span>Open Dashboard</span>
           </motion.button>
+          </a>
         </motion.div>
       </div>
     </div>

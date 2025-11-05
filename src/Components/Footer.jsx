@@ -5,7 +5,7 @@ import { Sparkles, Facebook, Twitter, Linkedin, Instagram, Youtube, Mail, Phone,
 
 const Footer = () => {
   const companyLinks = [{name:'About Us', link:'/about'}, {name:'Careers', link:'/about'}, {name:'Contact', link:'/contact'}];
-  const productLinks = [{name:'Video Interviews', link:'/video-interviews'}, {name:'Resume Analysis', link:'/resume-analysis'}, {name:'Dashboard', link:'/video-interviews'}];
+  const productLinks = [{name:'Video Interviews', link:'/video-interviews'}, {name:'Resume Analysis', link:'/resume-analysis'}, {name:'Dashboard', link:'/dashboard'}];
   const supportLinks = [{name:'Privacy Policy', link:'/privacy-policy'}, {name:'Terms of Service', link:'/terms-of-service'}];
   return (
     <div>

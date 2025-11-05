@@ -8,7 +8,7 @@ const TermsOfService = () => {
       icon: UserX,
       title: 'Acceptance of Terms',
       content: [
-        'By accessing and using InterviewAI, you accept and agree to be bound by these Terms of Service',
+        'By accessing and using Interviewsta.AI, you accept and agree to be bound by these Terms of Service',
         'If you do not agree to these terms, please do not use our services',
         'We reserve the right to modify these terms at any time',
         'Continued use after changes constitutes acceptance of modified terms'
@@ -41,7 +41,7 @@ const TermsOfService = () => {
       icon: Shield,
       title: 'Intellectual Property',
       content: [
-        'All content, features, and functionality are owned by InterviewAI',
+        'All content, features, and functionality are owned by Interviewsta.AI',
         'Our AI technology, including Glee, is protected by intellectual property laws',
         'You retain ownership of content you upload (resumes, responses)',
         'We have a license to use your content to provide and improve services',
@@ -112,7 +112,7 @@ const TermsOfService = () => {
           className="bg-white rounded-2xl shadow-xl p-8 mb-8"
         >
           <p className="text-gray-700 leading-relaxed">
-            Welcome to InterviewAI. These Terms of Service govern your use of our AI-powered interview
+            Welcome to Interviewsta.AI. These Terms of Service govern your use of our AI-powered interview
             preparation platform. Please read these terms carefully before using our services. By creating
             an account or using our platform, you agree to be bound by these terms.
           </p>
@@ -182,8 +182,8 @@ const TermsOfService = () => {
             If you have questions about these Terms of Service, please contact our legal team:
           </p>
           <div className="space-y-2 opacity-90">
-            <p>Email: legal@interviewai.com</p>
-            <p>Address: 123 Innovation Drive, San Francisco, CA 94105</p>
+            <p>Email: aryankhannachd@gmail.com</p>
+            {/* <p>Address: 123 Innovation Drive, San Francisco, CA 94105</p> */}
           </div>
         </motion.div>
 
@@ -194,7 +194,7 @@ const TermsOfService = () => {
           className="mt-8 text-center text-gray-600 text-sm"
         >
           <p>
-            These Terms of Service constitute a legally binding agreement between you and InterviewAI.
+            These Terms of Service constitute a legally binding agreement between you and Interviewsta.AI.
             By using our services, you acknowledge that you have read, understood, and agree to be bound by these terms.
           </p>
         </motion.div>

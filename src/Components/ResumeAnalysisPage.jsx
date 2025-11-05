@@ -59,6 +59,7 @@ const ResumeAnalysisPage = ({ onSectionChange }) => {
             Our advanced AI analyzes your resume to help you stand out, pass ATS systems,
             and land more interviews.
           </p>
+          <a href='https://interviewsta-app-frontend.vercel.app'>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -69,6 +70,7 @@ const ResumeAnalysisPage = ({ onSectionChange }) => {
             <span>Analyze Your Resume</span>
             <ArrowRight className="h-5 w-5" />
           </motion.button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -137,6 +139,7 @@ const ResumeAnalysisPage = ({ onSectionChange }) => {
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Get instant, actionable feedback to make your resume stand out and land more interviews.
           </p>
+          <a href='https://interviewsta-app-frontend.vercel.app'>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -146,6 +149,7 @@ const ResumeAnalysisPage = ({ onSectionChange }) => {
             <FileText className="h-5 w-5" />
             <span>Upload Your Resume</span>
           </motion.button>
+          </a>
         </motion.div>
       </div>
     </div>

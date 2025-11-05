@@ -13,6 +13,15 @@ const Contact = ({ onSectionChange }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const recipient = 'aryankhannachd@gmail.com';
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -24,21 +33,21 @@ const Contact = ({ onSectionChange }) => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'support@interviewai.com',
+      details: 'aryankhannachd@gmail.com',
       description: 'Get a response within 24 hours'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 9am to 6pm PST'
+      details: '7340899959',
+      description: 'Mon-Fri from 9am to 6pm IST'
     },
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Innovation Drive, San Francisco, CA 94105',
-      description: 'Schedule an appointment first'
-    }
+    // {
+    //   icon: MapPin,
+    //   title: 'Visit Us',
+    //   details: '123 Innovation Drive, San Francisco, CA 94105',
+    //   description: 'Schedule an appointment first'
+    // }
   ];
 
   const faqs = [
@@ -81,7 +90,7 @@ const Contact = ({ onSectionChange }) => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {contactInfo.map((info, index) => (
             <motion.div
               key={index}
@@ -101,7 +110,7 @@ const Contact = ({ onSectionChange }) => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-1 gap-12 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -183,7 +192,7 @@ const Contact = ({ onSectionChange }) => {
             )}
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -197,11 +206,11 @@ const Contact = ({ onSectionChange }) => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
                   <span className="text-gray-700 font-medium">Monday - Friday</span>
-                  <span className="text-gray-600">9:00 AM - 6:00 PM PST</span>
+                  <span className="text-gray-600">9:00 AM - 6:00 PM IST</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
                   <span className="text-gray-700 font-medium">Saturday</span>
-                  <span className="text-gray-600">10:00 AM - 4:00 PM PST</span>
+                  <span className="text-gray-600">10:00 AM - 4:00 PM IST</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
                   <span className="text-gray-700 font-medium">Sunday</span>
@@ -224,7 +233,7 @@ const Contact = ({ onSectionChange }) => {
                 Visit Help Center
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <motion.div

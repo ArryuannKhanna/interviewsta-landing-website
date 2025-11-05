@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Target, Users, Zap, Award, Heart, Globe, TrendingUp } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 
 const AboutUs = ({ onSectionChange }) => {
   const values = [
@@ -27,39 +27,39 @@ const AboutUs = ({ onSectionChange }) => {
     }
   ];
 
-  const team = [
-    {
-      name: 'Sarah Chen',
-      role: 'CEO & Co-Founder',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Former Google recruiter with 10+ years in talent acquisition'
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'CTO & Co-Founder',
-      image: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'AI researcher specializing in natural language processing'
-    },
-    {
-      name: 'Emily Johnson',
-      role: 'Head of Product',
-      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Product leader passionate about education technology'
-    },
-    {
-      name: 'David Park',
-      role: 'Head of AI',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-      bio: 'Machine learning expert from Stanford with 8+ years experience'
-    }
-  ];
+  // const team = [
+  //   {
+  //     name: 'Amit Aggarwal',
+  //     role: 'CEO & Co-Founder',
+  //     image: 'Images/Dr. Amit pic.jpeg',
+  //     bio: 'AI Research Scientist @ Wells Fargo, PhD in Computer Science from IIT Roorkee. 9+ years of experience in Natural Language Processing (NLP), large language models (LLMs), and speech recognition systems.'
+  //   },
+  //   {
+  //     name: 'Arryuann Khanna',
+  //     role: 'Developer & Co-Founder',
+  //     image: '/Images/AK_pic.jpeg',
+  //     bio: 'AI researcher specializing in natural language processing'
+  //   },
+  //   // {
+  //   //   name: 'Emily Johnson',
+  //   //   role: 'Head of Product',
+  //   //   image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
+  //   //   bio: 'Product leader passionate about education technology'
+  //   // },
+  //   // {
+  //   //   name: 'David Park',
+  //   //   role: 'Head of AI',
+  //   //   image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
+  //   //   bio: 'Machine learning expert from Stanford with 8+ years experience'
+  //   // }
+  // ];
 
   const milestones = [
-    { year: '2020', title: 'Company Founded', description: 'Started with a vision to democratize interview prep' },
-    { year: '2021', title: '10K Users', description: 'Reached our first major milestone of helping 10,000 candidates' },
-    { year: '2022', title: 'AI Breakthrough', description: 'Launched Glee, our revolutionary AI interviewer' },
-    { year: '2023', title: '50K+ Success Stories', description: 'Helped over 50,000 professionals land their dream jobs' },
-    { year: '2024', title: 'Global Expansion', description: 'Now serving candidates in over 50 countries worldwide' }
+    { year: 'August, 2025', title: 'Company Founded', description: 'Started with a vision to democratize interview prep' },
+    { year: 'September, 2025', title: 'Worked on Resume Analysis', description: 'Transformed resume analysis with AI-driven insights' },
+    { year: 'October, 2025', title: 'Introduced Glee', description: 'Launched Glee, our revolutionary AI interviewer' },
+    // { year: 'November, 2025', title: '50K+ Success Stories', description: 'Helped over 50,000 professionals land their dream jobs' },
+    // { year: 'December, 2025', title: 'Global Expansion', description: 'Now serving candidates in over 50 countries worldwide' }
   ];
 
   return (
@@ -73,7 +73,7 @@ const AboutUs = ({ onSectionChange }) => {
         >
           <div className="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-6 py-2 mb-6">
             <Brain className="h-5 w-5 text-blue-600" />
-            <span className="text-blue-600 font-medium">About InterviewAI</span>
+            <span className="text-blue-600 font-medium">About Interviewsta.AI</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Empowering Careers Through
@@ -96,7 +96,7 @@ const AboutUs = ({ onSectionChange }) => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                InterviewAI was born from a simple observation: interview preparation is broken.
+                Interviewsta.AI was born from a simple observation: interview preparation is broken.
                 Traditional methods are expensive, time-consuming, and often don't provide the realistic
                 practice candidates need to succeed.
               </p>
@@ -142,7 +142,7 @@ const AboutUs = ({ onSectionChange }) => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -150,7 +150,7 @@ const AboutUs = ({ onSectionChange }) => {
           className="mb-20"
         >
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Meet Our Team</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -178,7 +178,7 @@ const AboutUs = ({ onSectionChange }) => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -229,6 +229,7 @@ const AboutUs = ({ onSectionChange }) => {
             we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://interviewsta-app-frontend.vercel.app/">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -237,6 +238,8 @@ const AboutUs = ({ onSectionChange }) => {
             >
               Start Practicing
             </motion.button>
+            </a>
+            <Link to="/contact">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -245,6 +248,7 @@ const AboutUs = ({ onSectionChange }) => {
             >
               Contact Us
             </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>

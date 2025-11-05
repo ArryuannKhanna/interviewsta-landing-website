@@ -30,7 +30,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Home = () => {
   const carouselRef = useRef(null);
@@ -93,6 +93,7 @@ const Home = () => {
         "Industry-specific scenarios",
       ],
       video: import.meta.env.VITE_VIDEO_SRC2,
+      link: "/video-interviews"
     },
     {
       icon: TrendingUp,
@@ -106,6 +107,7 @@ const Home = () => {
         "Industry alignment",
       ],
       video: import.meta.env.VITE_VIDEO_SRC3,
+      link: "/resume-analysis"
     },
     // {
     //   icon: Target,
@@ -122,43 +124,62 @@ const Home = () => {
   ];
 
   const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "Software Engineer at Google",
-      image:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
-      content:
-        "InterviewAI helped me land my dream job at Google. The AI interviewer was incredibly realistic and helped me practice behavioral questions I never would have thought of.",
-      rating: 5,
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Product Manager at Microsoft",
-      image:
-        "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
-      content:
-        "The resume analysis feature was a game-changer. It identified gaps I didn't even know existed and helped me optimize for ATS systems.",
-      rating: 5,
-    },
-    {
-      name: "Emily Johnson",
-      role: "Data Scientist at Amazon",
-      image:
-        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
-      content:
-        "The personalized study plans kept me focused and motivated. I improved my interview performance by 40% in just 3 weeks.",
-      rating: 5,
-    },
-    {
-      name: "David Park",
-      role: "Engineering Manager at Meta",
-      image:
-        "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
-      content:
-        "As someone transitioning to management, the leadership-focused interviews were exactly what I needed. Highly recommend!",
-      rating: 5,
-    },
-  ];
+  {
+    name: "Sarah Chen",
+    role: "Software Engineer at Google",
+    image:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    content:
+      "Interviewsta.ai helped me prepare for DSA interviews in a very short span. I could practice efficiently and gain confidence quickly.",
+    rating: 5,
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "Student at Stanford University",
+    image:
+      "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    content:
+      "Glee guided me patiently to the right answer and encouraged me to think beyond the obvious solutions. Her mentorship made a huge difference.",
+    rating: 5,
+  },
+  {
+    name: "Emily Johnson",
+    role: "Data Scientist at Amazon",
+    image:
+      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    content:
+      "I would recommend Interviewsta.ai to anyone who finds interview scenarios daunting. It builds both skill and confidence.",
+    rating: 5,
+  },
+  {
+    name: "David Park",
+    role: "Product Manager at Microsoft",
+    image:
+      "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    content:
+      "The resume analysis feature of Interviewsta.ai helped me better align my resume to the job requirements. I landed more interview calls after using it.",
+    rating: 5,
+  },
+  {
+    name: "Lisa Wong",
+    role: "Frontend Developer at Shopify",
+    image:
+      "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    content:
+      "Interviewsta.ai is amazing! The mock interviews, tips, and feedback made me more confident and prepared for real interviews.",
+    rating: 5,
+  },
+  {
+    name: "Rajesh Kumar",
+    role: "Intern at Tesla",
+    image:
+      "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    content:
+      "The behavioral interview simulations on Interviewsta.ai helped me answer tricky questions with ease and clarity. I feel more ready than ever!",
+    rating: 5,
+  },
+];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -309,25 +330,29 @@ const Home = () => {
             variants={containerVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <motion.button
-              variants={buttonVariants}
-              whileHover="hover"
-              onClick={() => onSectionChange("video-interview")}
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-200 flex items-center space-x-2"
-            >
+            <a href="https://interviewsta-app-frontend.vercel.app/">
+              <motion.button
+                variants={buttonVariants}
+                whileHover="hover"
+                onClick={() => onSectionChange("video-interview")}
+                className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-200 flex items-center space-x-2"
+              >
               <Play className="h-5 w-5" />
               <span>Start Interview Practice</span>
               <motion.div animate={{ x: 0 }} whileHover={{ x: 5 }}>
                 <ArrowRight className="h-5 w-5" />
               </motion.div>
             </motion.button>
+            </a>
             <motion.button
               variants={buttonVariants}
               whileHover="hover"
               onClick={() => onSectionChange("dashboard")}
               className="bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl border border-gray-200 hover:border-gray-300 transition-all duration-200"
             >
-              View Dashboard
+              <Link to="/dashboard">
+                View Dashboard
+              </Link>
             </motion.button>
           </motion.div>
 
@@ -424,6 +449,7 @@ const Home = () => {
                   </motion.div>
                 ))}
               </div>
+            <a href="https://interviewsta-app-frontend.vercel.app/">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -434,6 +460,7 @@ const Home = () => {
                 <span>Start Interview with Glee</span>
                 <ArrowRight className="h-5 w-5" />
               </motion.button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -650,14 +677,19 @@ const Home = () => {
                 platform gives you the practice, feedback, and confidence you
                 need to succeed.
               </p>
+
+            <a href="https://interviewsta-app-frontend.vercel.app/">
               <motion.button
+                href="https://interviewsta-app-frontend.vercel.app/"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onSectionChange("signup")}
                 className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
               >
-                Start Preparing Today
+                  Start Preparing Today
+                
               </motion.button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -826,7 +858,7 @@ const Home = () => {
                         </motion.div>
                       ))}
                     </div>
-
+                  <Link to={service.link}>
                     <motion.button
                       whileHover={{
                         scale: 1.05,
@@ -843,6 +875,7 @@ const Home = () => {
                         <ArrowRight className="h-5 w-5" />
                       </motion.div>
                     </motion.button>
+                  </Link>
                   </motion.div>
 
                   {/* Visual Side */}
@@ -1203,7 +1236,7 @@ const Home = () => {
                 <div className="relative z-10">
                   <Quote className="h-10 w-10 text-blue-500/30 mb-4" />
                   <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                    {testimonials[1].content}
+                    {testimonials[3].content}
                   </p>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -1240,7 +1273,7 @@ const Home = () => {
                 <div className="relative z-10">
                   <Quote className="h-10 w-10 text-purple-500/30 mb-4" />
                   <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                    {testimonials[2].content}
+                    {testimonials[4].content}
                   </p>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -1290,7 +1323,7 @@ const Home = () => {
               <div className="relative z-10">
                 <Quote className="h-12 w-12 text-white/30 mb-6" />
                 <p className="text-white text-xl md:text-2xl font-medium mb-8 leading-relaxed">
-                  {testimonials[3].content}
+                  {testimonials[5].content}
                 </p>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
