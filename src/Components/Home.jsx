@@ -84,7 +84,7 @@ const Home = () => {
         "Performance analytics",
         "Industry-specific scenarios",
       ],
-      video: "videos/Showreel_-Web-gallery-[remix] (1).mp4",
+      video: import.meta.env.VITE_VIDEO_SRC2,
     },
     {
       icon: TrendingUp,
@@ -97,7 +97,7 @@ const Home = () => {
         "Format suggestions",
         "Industry alignment",
       ],
-      video: "videos/Showreel_-Web-gallery-[remix] (2).mp4",
+      video: import.meta.env.VITE_VIDEO_SRC2,
     },
     // {
     //   icon: Target,
@@ -437,7 +437,7 @@ const Home = () => {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white border-opacity-20 shadow-sm shadow-white">
                 <video
-                  src="videos/Showreel_-Web-gallery-[remix].mp4"
+                  src={import.meta.env.VITE_VIDEO_SRC1}
                   className="rounded-2xl"
                   muted
                   autoPlay
