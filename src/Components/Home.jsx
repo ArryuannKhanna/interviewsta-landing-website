@@ -35,10 +35,18 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const carouselRef = useRef(null);
   const navigate = useNavigate();
+  const videoRef = useRef(null);
   // document.body.getClient
   useEffect(() => {
     const rect = carouselRef.current.getBoundingClientRect();
     // console.log('Carousel dimensions:', rect);
+  }, []);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.warn('Autoplay was blocked:', error);
+      });
+    }
   }, []);
   const features = [
     {
@@ -97,7 +105,7 @@ const Home = () => {
         "Format suggestions",
         "Industry alignment",
       ],
-      video: import.meta.env.VITE_VIDEO_SRC2,
+      video: import.meta.env.VITE_VIDEO_SRC3,
     },
     // {
     //   icon: Target,
@@ -437,11 +445,13 @@ const Home = () => {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white border-opacity-20 shadow-sm shadow-white">
                 <video
+                  ref={videoRef}
                   src={import.meta.env.VITE_VIDEO_SRC1}
                   className="rounded-2xl"
                   muted
                   autoPlay
                   loop
+                  playsInline
                 />
               </div>
             </motion.div>
