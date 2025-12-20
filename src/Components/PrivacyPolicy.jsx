@@ -101,7 +101,7 @@ const PrivacyPolicy = () => {
           className="bg-white rounded-2xl shadow-xl p-8 mb-8"
         >
           <p className="text-gray-700 leading-relaxed">
-            At InterviewAI, we take your privacy seriously. This Privacy Policy explains how we collect,
+            At Interviewsta.AI, we take your privacy seriously. This Privacy Policy explains how we collect,
             use, protect, and share your personal information when you use our AI-powered interview
             preparation platform. By using our services, you agree to the collection and use of information
             in accordance with this policy.
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
             If you have any questions or concerns about our privacy practices, please don't hesitate to contact us:
           </p>
           <div className="space-y-2 opacity-90">
-            <p>Email: privacy@interviewai.com</p>
+            <p>Email: privacy@Interviewsta.AI.com</p>
             <p>Address: 123 Innovation Drive, San Francisco, CA 94105</p>
           </div>
         </motion.div>
