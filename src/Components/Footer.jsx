@@ -83,7 +83,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Support */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -101,7 +101,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Mail className="h-4 w-4" />
-                  <span>aryankhannachd@gmail.com</span>
+                  <span>support@interviewsta.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Phone className="h-4 w-4" />
@@ -112,7 +112,7 @@ const Footer = () => {
                   <span>Banglore, KA</span>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Bottom Bar */}

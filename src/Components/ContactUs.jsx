@@ -33,7 +33,7 @@ const Contact = ({ onSectionChange }) => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'aryankhannachd@gmail.com',
+      details: 'support@interviewsta.com',
       description: 'Get a response within 24 hours'
     },
     {

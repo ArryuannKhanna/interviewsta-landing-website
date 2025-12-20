@@ -38,8 +38,8 @@ function App() {
       { path: "/video-interviews", element: <VideoInterviewsPage /> },
       { path: "/resume-analysis", element: <ResumeAnalysisPage /> },
       { path: "/contact", element: <Contact /> },
-      { path: "/terms-of-service", element: <TermsOfService /> },
-      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      // { path: "/terms-of-service", element: <TermsOfService /> },
+      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
       { path: "/dashboard", element: <Dashboard /> }
     ]},
     
