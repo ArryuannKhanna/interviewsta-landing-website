@@ -6,7 +6,7 @@ import { Sparkles, Facebook, Twitter, Linkedin, Instagram, Youtube, Mail, Phone,
 const Footer = () => {
   const companyLinks = [{name:'About Us', link:'/about'}, {name:'Careers', link:'/about'}, {name:'Contact', link:'/contact'}];
   const productLinks = [{name:'Video Interviews', link:'/video-interviews'}, {name:'Resume Analysis', link:'/resume-analysis'}, {name:'Dashboard', link:'/dashboard'}];
-  const supportLinks = [{name:'Privacy Policy', link:'/privacy-policy'}, {name:'Terms of Service', link:'/terms-of-service'}];
+  // const supportLinks = [{name:'Privacy Policy', link:'/privacy-policy'}, {name:'Terms of Service', link:'/terms-of-service'}];
   return (
     <div>
         <footer className="bg-gray-900 text-white py-16">
@@ -83,20 +83,20 @@ const Footer = () => {
             </motion.div>
 
             {/* Support */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold mb-6">Support</h4>
-              <ul className="space-y-3 mb-6">
+              {/* <ul className="space-y-3 mb-6">
                 {supportLinks.map((item, index) => (
                   <motion.li key={index} whileHover={{ x: 5 }}>
                     <Link to={item.link} className="text-gray-400 hover:text-white transition-colors">{item.name}</Link>
                   </motion.li>
                 ))}
-              </ul>
+              </ul> */}
 
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-400">
@@ -112,7 +112,7 @@ const Footer = () => {
                   <span>Banglore, KA</span>
                 </div>
               </div>
-            </motion.div> */}
+            </motion.div>
           </div>
 
           {/* Bottom Bar */}

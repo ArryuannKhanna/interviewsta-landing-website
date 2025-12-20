@@ -74,7 +74,7 @@ const Header = () => {
     { id: 'home', label: 'Home', link:'/' },
     { id: "product", label: "Product", subItems: productSubItems },
     { id: "company", label: "Company", subItems: companySubItems },
-    { id: "support", label: "Support", subItems: supportSubItems },
+    // { id: "support", label: "Support", subItems: supportSubItems },
   ];
   useEffect(() => {
     if (hoveredNavItem === false) {
