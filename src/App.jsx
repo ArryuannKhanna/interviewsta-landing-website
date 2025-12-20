@@ -13,6 +13,7 @@ import ResumeAnalysisPage from './Components/ResumeAnalysisPage.jsx'
 import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import Dashboard from './Components/Dashboard.jsx'
+import PageNotFound from './Components/PageNotFound.jsx'
 
 import ScrollToTop from './ScrollToTop/ScrollToTop.jsx'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
@@ -40,7 +41,8 @@ function App() {
       { path: "/contact", element: <Contact /> },
       // { path: "/terms-of-service", element: <TermsOfService /> },
       // { path: "/privacy-policy", element: <PrivacyPolicy /> },
-      { path: "/dashboard", element: <Dashboard /> }
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "*", element: <PageNotFound /> }
     ]},
     
     // Add more routes here as needed
