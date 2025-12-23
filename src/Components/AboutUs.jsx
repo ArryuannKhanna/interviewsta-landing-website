@@ -55,7 +55,7 @@ const AboutUs = ({ onSectionChange }) => {
   // ];
 
   const milestones = [
-    { year: 'August, 2025', title: 'Company Founded', description: 'Started with a vision to democratize interview prep' },
+    { year: '2024', title: 'Beginning of the initiative', description: 'Started with a vision to democratize interview prep' },
     { year: 'September, 2025', title: 'Worked on Resume Analysis', description: 'Transformed resume analysis with AI-driven insights' },
     { year: 'October, 2025', title: 'Introduced Glee', description: 'Launched Glee, our revolutionary AI interviewer' },
     // { year: 'November, 2025', title: '50K+ Success Stories', description: 'Helped over 50,000 professionals land their dream jobs' },

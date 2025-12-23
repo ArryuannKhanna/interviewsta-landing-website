@@ -125,7 +125,7 @@ const Home = () => {
 
   const testimonials = [
   {
-    name: "Sarah Chen",
+    name: "Abhishek",
     role: "Software Engineer at Google",
     image:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
@@ -134,7 +134,7 @@ const Home = () => {
     rating: 5,
   },
   {
-    name: "Michael Rodriguez",
+    name: "Pranav",
     role: "Student at Stanford University",
     image:
       "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
@@ -143,7 +143,7 @@ const Home = () => {
     rating: 5,
   },
   {
-    name: "Emily Johnson",
+    name: "Vansh",
     role: "Data Scientist at Amazon",
     image:
       "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
@@ -152,7 +152,7 @@ const Home = () => {
     rating: 5,
   },
   {
-    name: "David Park",
+    name: "Anushka",
     role: "Product Manager at Microsoft",
     image:
       "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
@@ -161,7 +161,7 @@ const Home = () => {
     rating: 5,
   },
   {
-    name: "Lisa Wong",
+    name: "Varun",
     role: "Frontend Developer at Shopify",
     image:
       "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
@@ -170,7 +170,7 @@ const Home = () => {
     rating: 5,
   },
   {
-    name: "Rajesh Kumar",
+    name: "Ridhi",
     role: "Intern at Tesla",
     image:
       "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
@@ -364,9 +364,9 @@ const Home = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16"
           >
             {[
-              { number: "50K+", label: "Students Trained" },
+              { number: "2x", label: "Improvements" },
               { number: "95%", label: "Success Rate" },
-              { number: "1000+", label: "Interview Questions" },
+              { number: "10k+", label: "Interview Questions" },
               { number: "24/7", label: "AI Support" },
             ].map((stat, index) => (
               <motion.div
@@ -1034,9 +1034,9 @@ const Home = () => {
                 Get Hired at Top Companies
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of professionals who landed their dream roles
-            </p>
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear from some of our testers about their experience with the features
+            </p> */}
           </motion.div>
 
           {/* Company Carousel */}
@@ -1112,7 +1112,7 @@ const Home = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands who transformed their careers with our platform
+              Hear from some of our testers about their experience with the features
             </p>
           </motion.div>
 
@@ -1144,6 +1144,9 @@ const Home = () => {
                 <p className="text-white text-xl md:text-2xl font-medium mb-8 leading-relaxed">
                   {testimonials[0].content}
                 </p>
+                <p className="text-white text-xl md:text-2xl font-medium mb-8 leading-relaxed">
+                  - {testimonials[0].name}
+                </p>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -1171,6 +1174,9 @@ const Home = () => {
                 <Quote className="h-10 w-10 text-blue-500/30 mb-4" />
                 <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                   {testimonials[1].content}
+                </p>
+                <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                  - {testimonials[1].name}
                 </p>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -1209,6 +1215,9 @@ const Home = () => {
                 <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                   {testimonials[2].content}
                 </p>
+                <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                  - {testimonials[2].name}
+                </p>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -1237,6 +1246,9 @@ const Home = () => {
                   <Quote className="h-10 w-10 text-blue-500/30 mb-4" />
                   <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                     {testimonials[3].content}
+                  </p>
+                  <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                    - {testimonials[3].name}
                   </p>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -1274,6 +1286,9 @@ const Home = () => {
                   <Quote className="h-10 w-10 text-purple-500/30 mb-4" />
                   <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                     {testimonials[4].content}
+                  </p>
+                  <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                    - {testimonials[4].name}
                   </p>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -1324,6 +1339,9 @@ const Home = () => {
                 <Quote className="h-12 w-12 text-white/30 mb-6" />
                 <p className="text-white text-xl md:text-2xl font-medium mb-8 leading-relaxed">
                   {testimonials[5].content}
+                </p>
+                <p className="text-white text-xl md:text-2xl font-medium mb-8 leading-relaxed">
+                  - {testimonials[5].name}
                 </p>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
