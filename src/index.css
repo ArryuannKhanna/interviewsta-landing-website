@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Your custom styles */
+@property --scroll-time {
+    syntax: '<time>';
+    inherits: false;
+    initial-value: 9s;
+}
+
+
+@theme {
+  --animate-rainbow-spin: rainbow-spin 3s linear infinite;
+  @keyframes rainbow-spin {
+    0% { 
+      transform: rotate(0deg);
+    }
+    100% { 
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin-angle {
+    to { --angle: 360deg; }
+  }
+  --animate-arrow-jitter: arrow-jitter 2s ease-in-out infinite;
+  @keyframes arrow-jitter {
+    0% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    100% { transform: translateX(-2px); }
+  }
+  --animate-scroll: scroll var(--scroll-time) linear infinite;
+  /* --animate-scroll-slower: scroll 40s linear infinite; */
+
+  @keyframes scroll {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(-1440px); }
+  }
+
+  /* --animate-slowed: slowed 1s ease-in-out;
+  @keyframes slowed {
+    to { --scroll-time: 40s; }
+  } */
+}
+
