@@ -189,6 +189,13 @@ const InterviewInterface = () => {
   const interviewTypeIdRef = useRef(null);
   const sessionDurationRef = useRef(0);
 
+  // Computed flag: when it's clearly user's turn to speak (AI finished, session active, mic ready)
+  const isUserTurnToSpeak =
+    issessiongoing && !isInterviewerSpeaking && micEnabled && !isProcessingAudio;
+
+  // Prefer Glee video when available; fall back to avatar card on load error
+  const [showGleeVideo, setShowGleeVideo] = useState(true);
+
 
 
   const sessionIdRef = useRef(null);
@@ -2719,14 +2726,33 @@ const InterviewInterface = () => {
                 </h3>
               </div>
               <div className="relative rounded-lg md:rounded-xl overflow-hidden bg-slate-900 aspect-video shadow-inner flex items-center justify-center">
-                <video
-                  ref={videoRef}
-                  src="/Video/WhatsApp Video 2025-01-14 at 11.34.08.mp4"
-                  muted
-                  loop
-                  className="w-full h-full object-contain"
-                  playsInline
-                />
+                {showGleeVideo ? (
+                  <video
+                    ref={videoRef}
+                    src="/Video/WhatsApp Video 2025-01-14 at 11.34.08.mp4"
+                    muted
+                    loop
+                    className="w-full h-full object-contain"
+                    playsInline
+                    onError={() => setShowGleeVideo(false)}
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center text-center px-4">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg mb-3">
+                      <Bot className="h-7 w-7 md:h-8 md:w-8 text-white" />
+                    </div>
+                    <p className="text-xs md:text-sm text-slate-100 font-semibold mb-1">
+                      Live AI Interviewer
+                    </p>
+                    <p className="text-[0.65rem] md:text-xs text-slate-300">
+                      {isInterviewerSpeaking
+                        ? "Glee is speaking..."
+                        : isInterviewerThinking
+                        ? "Glee is thinking..."
+                        : "Glee is ready for your response."}
+                    </p>
+                  </div>
+                )}
                 {isInterviewerThinking && (
                   <div className="absolute top-2 md:top-3 right-2 md:right-3">
                     <div className="flex items-center space-x-1 bg-blue-500/90 backdrop-blur-sm px-2 md:px-2.5 py-1 md:py-1.5 rounded-lg shadow-lg">
@@ -2833,9 +2859,10 @@ const InterviewInterface = () => {
                     {[...Array(9)].map((_, i) => {
                       const centerIndex = 4;
                       const distanceFromCenter = Math.abs(i - centerIndex);
-                      const baseHeight = isIntervieweeSpeaking
+                      const isActiveBar = isIntervieweeSpeaking || isUserTurnToSpeak;
+                      const baseHeight = isActiveBar
                         ? Math.max(0.15, 1 - distanceFromCenter * 0.15) *
-                          vadConfidence
+                          Math.max(0.35, vadConfidence)
                         : 0.1;
                       const animationDelay = `${i * 50}ms`;
 
@@ -3297,6 +3324,36 @@ const InterviewInterface = () => {
                               <span className="text-sm font-medium">
                                 Speaking...
                               </span>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                    {!isIntervieweeSpeaking && isUserTurnToSpeak && (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        className="flex justify-end"
+                      >
+                        <div className="flex items-start space-x-3 max-w-[85%] sm:max-w-[75%] flex-row-reverse space-x-reverse">
+                          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-600 shadow-md">
+                            <User className="h-5 w-5 text-white" />
+                          </div>
+                          <div className="rounded-2xl px-5 py-4 bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-sm">
+                            <div className="flex items-center space-x-3">
+                              <div className="relative">
+                                <div className="w-3 h-3 rounded-full bg-blue-200 animate-ping" />
+                                <div className="absolute inset-0 m-auto w-2.5 h-2.5 rounded-full bg-white" />
+                              </div>
+                              <div className="flex flex-col">
+                                <span className="text-sm font-semibold">
+                                  Your turn to speak
+                                </span>
+                                <span className="text-xs text-blue-50/90">
+                                  Answer the question in your own words.
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
